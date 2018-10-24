@@ -13,11 +13,11 @@ import AppKit
 #endif
 
 public struct Dimension : Property, NumericalEquality, RelativeEquality, NumericalInequality, RelativeInequality, Addition, Multiplication {
-    public let attribute: NSLayoutAttribute
+    public let attribute: NSLayoutConstraint.Attribute
     public let context: Context
     public let view: View
 
-    internal init(_ context: Context, _ view: View, _ attribute: NSLayoutAttribute) {
+    internal init(_ context: Context, _ view: View, _ attribute: NSLayoutConstraint.Attribute) {
         self.attribute = attribute
         self.context = context
         self.view = view
